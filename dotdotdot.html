@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .expand {
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        JavaScript is <span 
+        style="
+            background-color: gray;
+            padding: 0 5px;
+            cursor: pointer;
+        "
+        
+        onclick = "
+        document.querySelector('#hidden').style.display = 'inline';
+        this.style.display = 'none';    
+    ">...</span> <span id="hidden" class="expand">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio cum vitae vero assumenda voluptatibus? Repudiandae quisquam esse eos maiores, suscipit quidem, qui totam in, sunt quia minima officia odit?</span>    
+    
+    <hr>
+
+    JavaScript is <span 
+    style="
+        background-color: gray;
+        padding: 0 5px;
+        cursor: pointer;
+    "
+    
+    onclick = "
+        document.querySelector('#content').innerHTML = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid distinctio cum vitae vero assumenda voluptatibus? Repudiandae quisquam esse eos maiores, suscipit quidem, qui totam in, sunt quia minima officia odit?`;
+        this.style.display = 'none';    
+    ">...</span>
+    <span id="content"></span>    
+
+    </body>
+</html>
