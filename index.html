@@ -39,29 +39,42 @@
         }
         
     </style>
-</head>
-<body>
-    <h1><a href="index.html">web</a></h1>
-    <input type="button" value="1" onclick="console.log(this);">
-    <input type="button" value="night" 
-        onclick="
-            // alert('야간')
-            if (this.value === 'night'){    
-                document.querySelector('body').style.backgroundColor=('black');
+    <script>
+        function night(){
+            document.querySelector('body').style.backgroundColor=('black');
                 document.querySelector('body').style.color=('white');
                 this.value = 'day';
                 let arr = document.querySelectorAll('a');
                 for (let i = 0; i < arr.length; i++){
                     arr[i].style.color = 'white';
-                }       
-            } else {
-                document.querySelector('body').style.backgroundColor=('white');
+                }  
+        }
+
+        function day(){
+            
+            document.querySelector('body').style.backgroundColor=('white');
                 document.querySelector('body').style.color=('black');
-                this.value = 'night';
+                
                 let arr = document.querySelectorAll('a');
                 for (let i = 0; i < arr.length; i++){
                     arr[i].style.color ='#68A790';
                 }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">web</a></h1>
+    <input type="button" value="1" onclick="console.log(this);">
+    
+    <input type="button" value="night" 
+        onclick="
+            // alert('야간')
+            if (this.value === 'night'){  
+                night();  
+                this.value = 'day';     
+            } else {
+                day();
+                this.value = 'night';
             }
     ">
     
